@@ -82,8 +82,21 @@ class Car {
     this.tank = 0;
     this.odometer = 0;
   }
-  
-}
+  fill(gallons){
+    this.tank += gallons;
+  }
+  drive(distance){
+    for(let i = 0; i < (distance / this.milesPerGallon); i ++){
+    if(this.tank = 0){
+      return `I ran out of fuel at ${this.odometer} miles!`
+    }else if(this.tank >= 1){
+      this.odometer += this.milesPerGallon;
+      this.tank --;
+    }
+  }}
+    
+  }
+
 
 /*
   TASK 3
@@ -157,7 +170,7 @@ class Student extends Lambdasian {
     super(attrs);
     this.previousBackground = attrs.previousBackground;
     this.className = attrs.className;
-    this.favSubjects = attrs.favSubjects;
+    this.favSubjects = [attrs.favSubjects];
   }
   listSubjects(){
     
